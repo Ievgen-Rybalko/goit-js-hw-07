@@ -2,17 +2,21 @@ const actions = document.querySelectorAll('button');
 
 const counterMarkup = document.querySelector('#counter span');
 
-let counterValue = Number(counterMarkup.textContent);
+//let counterValue = Number(counterMarkup.textContent);
+let counterValue = 0;
 
 actions[1].addEventListener('click', () => {
     
-    counterMarkup.textContent = increment(Number(counterMarkup.textContent));
+    counterValue = increment(counterValue)
+    counterMarkup.textContent = counterValue;
+
     
 })
 
 actions[0].addEventListener('click', () => {
     
-    counterMarkup.textContent = decrement(Number(counterMarkup.textContent));
+    counterValue = decrement(counterValue)
+    counterMarkup.textContent = counterValue;
     
 })
 
